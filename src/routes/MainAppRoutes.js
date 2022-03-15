@@ -1,26 +1,19 @@
-import * as React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import App from '../components/App';
-import HomeScreen from '../components/HomeScreen';
-// import QrScan from '../components/QrScan';
-// import BookingTicket from '../components/common/BookingTicket';
-// import MonumentInformation from '../components/common/MonumentInformation';
-const Stack = createNativeStackNavigator();
-import {NavigationContainer} from '@react-navigation/native';
+import * as React from 'react'
+import {NavigationContainer} from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import HomeScreen from '../components/HomeScreen'
+import BookingHistory from '../components/BookingHistory'
+import QrScan from '../components/QrScan'
+const Stack = createNativeStackNavigator()
 
-function MainAppRoutes() {
-  return (
+function MainAppRoutes () {
+  return(
     <NavigationContainer>
-    <Stack.Navigator>
-      {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
-      {/* <Stack.Screen name="BookingTicket" component={BookingTicket} />
-      <Stack.Screen
-        name="MonumentInformation"
-        component={MonumentInformation}
-      /> */}
-    </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={HomeScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
-export default MainAppRoutes;
+export default MainAppRoutes

@@ -8,13 +8,13 @@ import {
     useColorScheme,
     View,
   } from 'react-native';
-// import MainAppRoutes from '../routes/MainAppRoutes';
+import MainAppRoutes from '../routes/MainAppRoutes';
 import HomeScreen from './HomeScreen';
 
 
 const App = () => {
     return (
-      <HomeScreen/>
+      <MainAppRoutes/>
     );
 }
 
