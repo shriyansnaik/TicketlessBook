@@ -8,12 +8,12 @@ import {
     useColorScheme,
     View,
   } from 'react-native';
-
+import MonumentInformation from './common/MonumentInformation';
 
 const App = () => {
     return (
       <View>
-          <Text>Hello</Text>
+         <MonumentInformation/>
       </View>
     );
 }
