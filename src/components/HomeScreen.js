@@ -6,7 +6,6 @@ function HomeScreen() {
   return (
     <View>
       <Text>HomeScreen</Text>
-      <Text>Edited by shubham</Text>
     </View>
   );
 }
