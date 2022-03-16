@@ -2,51 +2,63 @@ import React from 'react';
 import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import {Label} from './LoginCommon';
 
-const AttractionListItem = () => {
-  const {imageStyle, container, headingContainer, saveCircle} = styles;
+const AttractionListItem = props => {
+  const {
+    imageStyle,
+    container,
+    headingContainer,
+    saveCircle,
+    priceContainerAndRatingStyle,
+  } = styles;
+  const {cardContainer, image, heading, description, price,rating} = props;
   return (
-    <View
-      style={{backgroundColor:'#FFDDEE'}}
-      onPress={() => console.log('Detail Screen')}>
-      <View style={container}>
-        <TouchableOpacity style={saveCircle}>
-          <Image
-            style={{
-              height: 30,
-              width: 30,
-              tintColor:'white'
-            }}
-            source={require('../../assets/Icons/saved.png')}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            style={imageStyle}
-            source={require('../../assets/Images/login3.jpg')}
-          />
-        </TouchableOpacity>
-        <View style={headingContainer}>
-          <Label
-            text={'India Gate'}
-            textSize={20}
-            textWeight={700}
-            style={{margin: 5}}
-            // textColor='white'
-          />
-          <Image
-            style={{width: 20, height: 20, marginLeft: 40, marginRight: 10}}
-            source={require('../../assets/Icons/star.png')}
-          />
-          <Label text={4.8} textSize={16} textWeight={300} />
-        </View>
-        {/* <Label
+    <View style={container}>
+      <TouchableOpacity style={saveCircle}>
+        <Image
+          style={{
+            height: 30,
+            width: 30,
+            tintColor: 'white',
+          }}
+          source={require('../../assets/Icons/saved.png')}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Image style={imageStyle} source={image} />
+      </TouchableOpacity>
+      <View style={headingContainer}>
+        <Label
+          text={heading}
+          textSize={20}
+          textWeight={700}
+          style={{margin: 5}}
+          textColor={'black'}
+        />
+      </View>
+      <Label
         text={
-          'The India Gate (formerly known as the All India War Memorial) is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi, formerly called Kingsway. It stands as a memorial to 90,000 soldiers of the British Indian Army who died in between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third Anglo-Afghan War. 13,300 servicemens names, including some soldiers and officers from the United Kingdom, are inscribed on the gate.'
+          description
         }
         textSize={16}
         textWeight={400}
-        numberOfLines={2}
-      /> */}
+        numberOfLines={1}
+      />
+
+      <View style={priceContainerAndRatingStyle}>
+        <View style={{flexDirection: 'row', marginLeft: -35}}>
+          <Image
+            style={{width: 40, height: 40, marginLeft: 40, marginRight: 10}}
+            source={require('../../assets/Icons/rupee.png')}
+          />
+          <Label text={price} textSize={26} textWeight={500} textColor='black' />
+        </View>
+        <View style={{flexDirection: 'row', marginRight: 65}}>
+          <Image
+            style={{width: 25, height: 25, marginLeft: 40, marginRight: 10}}
+            source={require('../../assets/Icons/star.png')}
+          />
+          <Label text={rating} textSize={18} textWeight={600} />
+        </View>
       </View>
     </View>
   );
@@ -55,7 +67,10 @@ const AttractionListItem = () => {
 const styles = StyleSheet.create({
   container: {
     margin: 10,
-    padding: 10,
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    // alignItems: 'center',
   },
   headingContainer: {
     flexDirection: 'row',
@@ -69,9 +84,9 @@ const styles = StyleSheet.create({
   },
   saveCircle: {
     position: 'absolute',
-    top: 0,
+    top: 5,
     bottom: 0,
-    left: 0,
+    left: 5,
     right: 0,
     zIndex: 1,
     height: 50,
@@ -81,6 +96,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,
+  },
+  priceContainerAndRatingStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop:10
   },
 });
 

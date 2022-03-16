@@ -13,14 +13,14 @@ function MainAppRoutes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="TestingScreen" component={TestingScreen} />
+        <Stack.Screen name="Testing" component={TestingScreen} />
         <Stack.Screen
           name="SignIn"
           component={SignIn}
           options={{headerShown: false}}
         />
         <Stack.Screen name="AttractionList" component={AttractionListItem}/>
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,10 +1,44 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
 
-export default function TestingScreen() {
+
+
+function TestingScreen({navigation}) {
   return (
-    <View>
-      <Text style={{fontSize: 25, fontWeight: '400'}}>Test Your Reuable components here</Text>
+    <View style={{alignItems: 'center', marginTop: 100}}>
+      <TouchableOpacity
+        style={{
+          backgroundColor: 'skyblue',
+          height: 50,
+          width: 100,
+          borderRadius: 10,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        onPress={() => navigation.navigate('HomeScreen')}>
+        <Text style={{color: '#ffffff', fontSize: 20}}>Testing Screen</Text>
+      </TouchableOpacity>
     </View>
-  )
+    // <View
+    //   style={{
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     // marginTop: 10,
+    //     backgroundColor: '#000000',
+    //     flex: 1,
+    //   }}>
+    //   <BookingTicket
+    //     heading={'Taj Mahal'}
+    //     place={'Agra, Uttar Pradesh, India'}
+    //     date={'19.03.22'}
+    //     time={'12:45 PM'}
+    //     cost={'375'}
+    //     orderId ={'ABC9192'}
+    //     people={'3'}
+    //     qrcode={require('../assets/Images/QR.png')}
+    //   />
+    // </View>
+  );
 }
+
+export default TestingScreen;
