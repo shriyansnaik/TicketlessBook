@@ -22,6 +22,10 @@
 		3B2C691A49F7402FB32A35A3 /* Satoshi-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA46F87C49134423857AD1ED /* Satoshi-Medium.otf */; };
 		3A69B05AB72447318FA1458A /* Satoshi-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA34230A99314AD18E7AB279 /* Satoshi-MediumItalic.otf */; };
 		7745588C207F4F68AD05658C /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B28F8034F3C74895A08E08AF /* Satoshi-Regular.otf */; };
+		CB4570ABAA2047A09BC9F014 /* times-new-roman-bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E18BD55EEBAC4D8EB363C698 /* times-new-roman-bold-italic.ttf */; };
+		95710280393F4F7B9534B4B8 /* times-new-roman-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168264026027409DADDC8AF9 /* times-new-roman-bold.ttf */; };
+		D21FFB73E49B422383770B81 /* times-new-roman-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0930CAD6D6B24B8A92001935 /* times-new-roman-italic.ttf */; };
+		7C1DBE206E4741308287B552 /* times-new-roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27EB5BCEBF74CD89D301705 /* times-new-roman.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		EA46F87C49134423857AD1ED /* Satoshi-Medium.otf */ = {isa = PBXFileReference; name = "Satoshi-Medium.otf"; path = "../src/assets/fonts/Satoshi-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DA34230A99314AD18E7AB279 /* Satoshi-MediumItalic.otf */ = {isa = PBXFileReference; name = "Satoshi-MediumItalic.otf"; path = "../src/assets/fonts/Satoshi-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B28F8034F3C74895A08E08AF /* Satoshi-Regular.otf */ = {isa = PBXFileReference; name = "Satoshi-Regular.otf"; path = "../src/assets/fonts/Satoshi-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E18BD55EEBAC4D8EB363C698 /* times-new-roman-bold-italic.ttf */ = {isa = PBXFileReference; name = "times-new-roman-bold-italic.ttf"; path = "../src/assets/fonts/times-new-roman-bold-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		168264026027409DADDC8AF9 /* times-new-roman-bold.ttf */ = {isa = PBXFileReference; name = "times-new-roman-bold.ttf"; path = "../src/assets/fonts/times-new-roman-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0930CAD6D6B24B8A92001935 /* times-new-roman-italic.ttf */ = {isa = PBXFileReference; name = "times-new-roman-italic.ttf"; path = "../src/assets/fonts/times-new-roman-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F27EB5BCEBF74CD89D301705 /* times-new-roman.ttf */ = {isa = PBXFileReference; name = "times-new-roman.ttf"; path = "../src/assets/fonts/times-new-roman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,10 @@
 				EA46F87C49134423857AD1ED /* Satoshi-Medium.otf */,
 				DA34230A99314AD18E7AB279 /* Satoshi-MediumItalic.otf */,
 				B28F8034F3C74895A08E08AF /* Satoshi-Regular.otf */,
+				E18BD55EEBAC4D8EB363C698 /* times-new-roman-bold-italic.ttf */,
+				168264026027409DADDC8AF9 /* times-new-roman-bold.ttf */,
+				0930CAD6D6B24B8A92001935 /* times-new-roman-italic.ttf */,
+				F27EB5BCEBF74CD89D301705 /* times-new-roman.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -263,6 +275,10 @@
 				3B2C691A49F7402FB32A35A3 /* Satoshi-Medium.otf in Resources */,
 				3A69B05AB72447318FA1458A /* Satoshi-MediumItalic.otf in Resources */,
 				7745588C207F4F68AD05658C /* Satoshi-Regular.otf in Resources */,
+				CB4570ABAA2047A09BC9F014 /* times-new-roman-bold-italic.ttf in Resources */,
+				95710280393F4F7B9534B4B8 /* times-new-roman-bold.ttf in Resources */,
+				D21FFB73E49B422383770B81 /* times-new-roman-italic.ttf in Resources */,
+				7C1DBE206E4741308287B552 /* times-new-roman.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
