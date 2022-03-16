@@ -37,17 +37,11 @@ function MainAppRoutes() {
           component={SignIn}
           options={{headerShown: false}}
         />
-<<<<<<< HEAD
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
           options={{headerShown: false}}
         />
-=======
-        <Stack.Screen name="AttractionList" component={AttractionListItem}/>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}}/>
-        <Stack.Screen name='QrScan' component={QrScan} options={{headerShown:false}}/>
->>>>>>> 6e5c361 (Save)
       </Stack.Navigator>
     </NavigationContainer>
   );

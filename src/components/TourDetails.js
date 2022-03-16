@@ -145,7 +145,7 @@ function TourDetails({route, navigation}) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Label text="Continue" textColor={'#ffffff'} textSize={30} />
+          <Label text="Book Tickets" textColor={'#ffffff'} textSize={30} />
         </TouchableOpacity>
       </View>
     </View>
