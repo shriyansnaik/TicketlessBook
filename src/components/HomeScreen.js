@@ -2,6 +2,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import BookingTicket from './common/BookingTicket';
 
+
 function HomeScreen({navigation}) {
   return (
     <View style={{alignItems: 'center', marginTop: 100}}>
@@ -14,7 +15,7 @@ function HomeScreen({navigation}) {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        onPress={() => navigation.navigate('SignIn')}>
+        onPress={() => navigation.navigate('AttractionList')}>
         <Text style={{color: '#ffffff', fontSize: 20}}>Testing Screen</Text>
       </TouchableOpacity>
     </View>
