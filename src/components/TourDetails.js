@@ -13,26 +13,10 @@ import {useState} from 'react';
 import {Label} from './common/LoginCommon';
 import IconText from './common/IconText';
 
-function TourDetails({navigation}) {
+function TourDetails({route, navigation}) {
+  const {image,heading,description,price} = route.params
   const [numberOfLines, setNumberOfLines] = useState(3);
-  const DATA = [
-    {
-      id: 1,
-      source: require('../assets/Images/Taj1.jpg'),
-    },
-    {
-      id: 2,
-      source: require('../assets/Images/Taj2.jpg'),
-    },
-    {
-      id: 3,
-      source: require('../assets/Images/Taj3.jpg'),
-    },
-    {
-      id: 4,
-      source: require('../assets/Images/Taj4.jpg'),
-    },
-  ];
+  
   return (
     <View>
       <ScrollView>
@@ -59,7 +43,7 @@ function TourDetails({navigation}) {
           />
         </TouchableOpacity>
         <Image
-          source={require('../assets/Images/Taj.jpg')}
+          source={image}
           style={{
             width: 380,
             height: 350,
@@ -71,7 +55,7 @@ function TourDetails({navigation}) {
         />
         <View style={{padding: 20}}>
           <Label
-            text="Taj Mahal"
+            text={heading}
             textSize={50}
             textColor="#000000"
             textWeight={500}
@@ -92,11 +76,7 @@ function TourDetails({navigation}) {
               textColor="#000000"
             />
             <Label
-              text="The Taj Mahal is an ivory-white marble mausoleum on the right bank
-                of the river Yamuna in the Indian city of Agra. It was commissioned
-                in 1632 by the Mughal emperor Shah Jahan (r. 1628–1658) to house the
-                tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of
-                Shah Jahan himself."
+              text={description}
               textSize={16}
               textWeight={600}
               style={{marginTop: 15}}
@@ -150,7 +130,7 @@ function TourDetails({navigation}) {
             textColor="#ff8f0b"
           />
           <Label
-            text={'120.00'}
+            text={price}
             textSize={24}
             textWeight={600}
             textColor="#000000"

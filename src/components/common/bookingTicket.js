@@ -21,10 +21,22 @@ function BookingTicket({
         // elevation: 5,
         borderRadius: 20,
       }}>
-      <Text style={{fontSize: 25, color: '#000000', fontWeight: 'bold', alignSelf:'center'}}>
+      <Text
+        style={{
+          fontSize: 25,
+          color: '#000000',
+          fontWeight: 'bold',
+          alignSelf: 'center',
+        }}>
         {heading}
       </Text>
-      <Text style={{color: '#00000050', fontWeight: 'bold', fontSize: 15, alignSelf:'center'}}>
+      <Text
+        style={{
+          color: '#00000050',
+          fontWeight: 'bold',
+          fontSize: 15,
+          alignSelf: 'center',
+        }}>
         Show this ticket at the entrance
       </Text>
       <View
@@ -38,7 +50,7 @@ function BookingTicket({
           marginTop: 15,
           marginBottom: 15,
         }}></View>
-      <View style={{width: '70%', alignSelf:'center'}}>
+      <View style={{width: '70%', alignSelf: 'center'}}>
         <DoubleLineText title={'Place'} subtitle={place} />
         <View
           style={{
@@ -100,7 +112,10 @@ function BookingTicket({
             marginLeft: 5,
           }}></View>
       </View>
-      <Image style={{height: 150, aspectRatio: 1, alignSelf: 'center',}} source={qrcode} />
+      <Image
+        style={{height: 150, aspectRatio: 1, alignSelf: 'center'}}
+        source={qrcode}
+      />
     </View>
   );
 }
