@@ -15,7 +15,7 @@ function TestingScreen({navigation}) {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        onPress={() => navigation.navigate('HomeScreen')}>
+        onPress={() => navigation.navigate('QrScan')}>
         <Text style={{color: '#ffffff', fontSize: 20}}>Testing Screen</Text>
       </TouchableOpacity>
     </View>
