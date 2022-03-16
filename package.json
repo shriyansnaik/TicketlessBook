@@ -10,19 +10,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/material-top-tabs": "^6.1.1",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
     "axios": "^0.26.1",
     "react": "17.0.2",
     "react-native": "0.67.3",
-    "react-native-camera": "^4.2.1",
     "react-native-calendar-strip": "^2.2.5",
-<<<<<<< HEAD
-    "react-native-calendars": "^1.1279.0",
->>>>>>> 060e63a (added calander)
-=======
->>>>>>> 35164ae (QrScan)
+    "react-native-camera": "^4.2.1",
     "react-native-dynamic-fonts": "^0.3.2",
+    "react-native-pager-view": "^5.4.15",
     "react-native-permissions": "^3.3.1",
     "react-native-qrcode-scanner": "^1.5.5",
     "react-native-qrcode-scanner-view": "^2.0.0",

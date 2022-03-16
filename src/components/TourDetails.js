@@ -137,6 +137,7 @@ function TourDetails({route, navigation}) {
           />
         </View>
         <TouchableOpacity
+        onPress={()=>navigation.navigate('SignIn')}
           style={{
             backgroundColor: '#fe2352',
             height: 50,

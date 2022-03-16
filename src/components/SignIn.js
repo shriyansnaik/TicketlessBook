@@ -324,7 +324,8 @@ class SignIn extends Component {
                     buttonTitle="Log In"
                     mode="dark"
                     onPress={() => {
-                      this.passwordValidation();
+                      this.props.navigation.navigate('TicketSelection')
+                      // this.passwordValidation();
                       // this.props.getLoginScreenDataApi(this.props.mobilenum,this.props.password,this.props.navigation);
                     }}
                   />
