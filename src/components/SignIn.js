@@ -1,39 +1,3 @@
-// import {Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
-// import React, {Component} from 'react';
-// import {Dimensions} from 'react-native';
-
-// export default class SignIn extends Component {
-//   render() {
-//     return (
-//       <View style={{backgroundColor: '#F2AF88', flex: 1}}>
-//         <Image
-//           source={require('../assets/Images/login4.jpg')}
-//           style={{
-//             width: Dimensions.get('window').width,
-//             height: Dimensions.get('window').height,
-//           }}
-//           blurRadius={3}
-//         />
-//         <Text
-//           style={{
-//             fontSize: 44,
-//             fontWeight: '600',
-//             position: 'absolute',
-//             color: '#ffffff',
-//           }}>
-//           Login
-//         </Text>
-//         <TextInput
-//           //   style={styles.TextInput}
-//           placeholder="Email."
-//           placeholderTextColor="#003f5c"
-//           //   onChangeText={email => setEmail(email)}
-//         />
-//       </View>
-//     );
-//   }
-// }
-
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -109,7 +73,7 @@ class SignIn extends Component {
             textWeight={700}
           />
           <TitleText
-            text="continue printing"
+            text="continue booking"
             textInHighlightedColor="Login"
             highlightTextColor="#1B5ADE"
             highlightedTextWeight={700}
@@ -170,11 +134,19 @@ class SignIn extends Component {
         'OK',
       );
     } else {
-      if(this.props.mobilenum !== ""){
-        this.props.getLoginScreenDataApi(this.props.mobilenum,this.props.password,this.props.navigation);
+      if (this.props.mobilenum !== '') {
+        this.props.getLoginScreenDataApi(
+          this.props.mobilenum,
+          this.props.password,
+          this.props.navigation,
+        );
         this.props.mobilenumChanged('');
-      }else{
-        this.props.getLoginScreenDataApi(this.props.emailId,this.props.password,this.props.navigation);
+      } else {
+        this.props.getLoginScreenDataApi(
+          this.props.emailId,
+          this.props.password,
+          this.props.navigation,
+        );
         this.props.emailIdChanged('');
       }
     }
@@ -233,7 +205,7 @@ class SignIn extends Component {
               {/*Top horizontal Scroll view */}
               <View style={{height: bottomHeight, width: windowWidth}}>
                 {/*First bottom  */}
-                <View style={socialMediaIconsContainer}>
+                {/* <View style={socialMediaIconsContainer}>
                   <BrushButtons
                     icon={require('../assets/Icons/Other/fbIcon/fbIcon.png')}
                     title="Facebook"
@@ -247,49 +219,48 @@ class SignIn extends Component {
                     title="Email"
                     onPress={this.scrollToEmail}
                   />
-                </View>
-                <View style={orStyle}>
+                </View> */}
+                {/* <View style={orStyle}>
                   <Label
                     textWeight={500}
                     text={'OR'}
                     textColor="#333333"
                     textSize={13}
                   />
-                </View>
-                <TitleViewAllButtonHeader viewBorderBottom={true} />
-
-                <TextField
-                  style={inputStyle}
-                  placeholder={'Phone number'}
-                  placeholderTextColor="#606060"
-                  hasBorder={true}
-                  maxLength={10}
-                  keyboardType={'phone-pad'}
-                  onChangeText={value => this.props.mobilenumChanged(value)}
-                  highlightColor="#EDF0F7"
-                />
-
-                <View style={buttonStyle}>
-                  <Button
-                    buttonTitle="Next"
-                    mode="dark"
-                    onPress={() => this.phoneNumberValidation()}
+                </View> */}
+                {/* <TitleViewAllButtonHeader viewBorderBottom={true} /> */}
+                <View style={{height: bottomHeight, width: windowWidth}}>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      marginTop: 34,
+                      marginLeft: 24,
+                    }}>
+                    <Label
+                      text="PHONE NUMBER"
+                      textColor="#606060"
+                      textWeight={400}
+                      textSize={13}
+                    />
+                  </View>
+                  <TextField
+                    style={inputStyle}
+                    placeholder={'Phone number'}
+                    placeholderTextColor="#606060"
+                    hasBorder={true}
+                    maxLength={10}
+                    keyboardType={'phone-pad'}
+                    onChangeText={value => this.props.mobilenumChanged(value)}
+                    highlightColor="#EDF0F7"
                   />
-                </View>
 
-                <View style={bottomTextContainer}>
-                  <Label
-                    text="No Account ?"
-                    textColor="#8A8A8A"
-                    textSize={16}
-                    textWeight={500}
-                  />
-                  <ButtonLink
-                    buttonTitle="Sign Up Instead"
-                    linkColor="#1B5ADE"
-                    onPress={() => this.props.navigation.navigate('SignUp')}
-                    style={signUpInsteadStyle}
-                  />
+                  <View style={buttonStyle}>
+                    <Button
+                      buttonTitle="Next"
+                      mode="dark"
+                      onPress={() => this.phoneNumberValidation()}
+                    />
+                  </View>
                 </View>
               </View>
 
@@ -300,14 +271,13 @@ class SignIn extends Component {
                   <TouchableOpacity onPress={this.scrollToTopLogin}>
                     <Image
                       source={require('../assets/Icons/Other/arrows/back/back.png')}
-                      // style={{marginTop: 34}}
                       style={{marginRight: 10}}
                     />
                   </TouchableOpacity>
                   <TitleViewAllButtonHeader
                     title={
                       <Label
-                        text="PASSWORD"
+                        text="OTP"
                         textColor="#606060"
                         textWeight={400}
                         textSize={13}
@@ -336,14 +306,14 @@ class SignIn extends Component {
                   <ButtonLink
                     buttonTitle={
                       <Label
-                        text="Forgot Password ?"
-                        textColor="#505050"
+                        text="Resend OTP"
+                        textColor="blue"
                         textSize={12}
                         textWeight={400}
                       />
                     }
                     onPress={() => {
-                      console.log('Forgot Password');
+                      console.log('Resend OTP');
                     }}
                     style={{marginTop: 24}}
                   />
@@ -360,20 +330,7 @@ class SignIn extends Component {
                   />
                 </View>
 
-                <View style={bottomTextContainer}>
-                  <Label
-                    text="No Account ?"
-                    textColor="#8A8A8A"
-                    textSize={16}
-                    textWeight={500}
-                  />
-                  <ButtonLink
-                    buttonTitle="Sign Up Instead"
-                    linkColor="#1B5ADE"
-                    onPress={() => this.props.navigation.navigate('SignUp')}
-                    style={signUpInsteadStyle}
-                  />
-                </View>
+                
               </View>
             </ScrollView>
             <ScrollView
@@ -467,7 +424,7 @@ class SignIn extends Component {
                   <TitleViewAllButtonHeader
                     title={
                       <Label
-                        text="PASSWORD"
+                        text="HAHH"
                         textColor="#606060"
                         textWeight={400}
                         textSize={13}
@@ -487,28 +444,7 @@ class SignIn extends Component {
                   highlightColor="#EDF0F7"
                 />
 
-                <View
-                  style={{
-                    width: '87%',
-                    marginHorizontal: 24,
-                    flexDirection: 'row',
-                    justifyContent: 'flex-end',
-                  }}>
-                  <ButtonLink
-                    buttonTitle={
-                      <Label
-                        text="Forgot Password ?"
-                        textColor="#505050"
-                        textSize={12}
-                        textWeight={400}
-                      />
-                    }
-                    onPress={() => {
-                      console.log('Forgot Password');
-                    }}
-                    style={{marginTop: 24}}
-                  />
-                </View>
+               
 
                 <View style={buttonStyle}>
                   <Button
@@ -613,7 +549,7 @@ const mapStateToProps = state => {
     mobilenum: state.profile.mobile_no,
     password: state.profile.password,
     emailId: state.profile.email_id,
-    user_id:state.profile.user_id
+    user_id: state.profile.user_id,
   };
 };
 
