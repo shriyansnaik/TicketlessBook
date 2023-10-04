@@ -9,6 +9,7 @@ TravelEase is your ultimate travel planning companion. It streamlines the entire
 - **Hotel Reservations:** Find the perfect accommodations to suit your preferences and budget.
 - **Explore Attractions:** Discover must-visit places and attractions at your destination.
 - **Dining Recommendations:** Access a curated list of dining spots, from local favorites to fine dining.
+- **Itinerary Planning:** Generate custom travel itineraries based on your days of visit for a well-organized trip.
 - **One-Click Booking:** Secure all your travel bookings with a single click.
   
   ...and many more.
