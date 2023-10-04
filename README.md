@@ -13,6 +13,9 @@ TravelEase is your ultimate travel planning companion. It streamlines the entire
   
   ...and many more.
 
+  
+![image](https://github.com/shriyansnaik/TravelEase/assets/66057990/652bb328-aa39-469b-99a9-cd7ff2ea90ed)
+
 Experience the convenience of having all your travel information and reservations at your fingertips. Say goodbye to the hassle of switching between multiple apps and websites. Travel with ease using TravelEase."
 
 This addition conveys that the app offers a wide range of booking options beyond those highlighted in the key features.
